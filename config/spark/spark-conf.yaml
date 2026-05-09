@@ -1,0 +1,14 @@
+spark:
+  app:
+    name: taxpayer-streaming
+  streaming:
+    trigger_interval: "10 seconds"
+    checkpoint_location: "/tmp/checkpoints"
+  kafka:
+    bootstrap_servers: "kafka:9092"
+    input_topic: "tax_events"
+  postgres:
+    host: "postgres"
+    db: "metrics"
+    user: "app"
+    password: "app"
